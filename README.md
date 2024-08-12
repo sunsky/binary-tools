@@ -4,6 +4,8 @@ Various Useful tools as statically linked ELF binaries with no dependencies. Dow
 
 All binaries have been stripped and packed with [upx](https://github.com/upx/upx) in order to have the smallest footprint.
 
+if not work, you can  try this first: export LD_LIBRARY_PATH=./x64/lib64
+
 # Filename map (x64)
 
 |Software                                             | Version    |Filename      |SHA256                                                             |
