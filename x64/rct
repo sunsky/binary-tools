@@ -1,0 +1,10 @@
+#!/usr/bin/python2
+# EASY-INSTALL-ENTRY-SCRIPT: 'subscription-manager==1.24.54','console_scripts','rct'
+__requires__ = 'subscription-manager==1.24.54'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('subscription-manager==1.24.54', 'console_scripts', 'rct')()
+    )

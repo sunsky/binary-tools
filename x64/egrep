@@ -1,0 +1,17 @@
+#!/bin/sh
+grep=grep
+unset _EXECOPT _GREPOPT
+case $0 in
+  */*)
+    dir=${0%/*}
+    if test -x "$dir/grep"; then
+      PATH=$dir:$PATH
+      grep=grep
+    fi;;
+esac
+if [ "$GREP_LEGACY_EGREP_FGREP_PS" = 1 ]; then
+  _EXECOPT="-a egrep"
+else
+  _GREPOPT=-E
+fi
+exec $_EXECOPT $grep $_GREPOPT "$@"
